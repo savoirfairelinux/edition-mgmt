@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_portal_light_partner" model="ir.actions.act_window">
+            <field name="name">Partners</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_type">form</field>
+            <!--Fake rule for the domain.-->
+            <!--We just need to call publication_rule which will do the real-->
+            <!--domain action-->
+            <field name="domain">[('partner_rule','=',True)]</field>
+            <field name="search_view_id" ref="base.view_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a contact in your address book.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_portal_light_partner"
+                  action="action_portal_light_partner"
+                  parent="portal.portal_orders"
+                  groups="base.group_portal"/>
+    </data>
+</openerp>

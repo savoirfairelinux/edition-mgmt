@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* portal_light_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-04 17:20+0000\n"
+"PO-Revision-Date: 2014-11-04 17:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: portal_light_partner
+#: model:ir.actions.act_window,help:portal_light_partner.action_portal_light_partner
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to add a contact in your address book.\n"
+"                </p>\n"
+"            "
+msgstr ""
+
+#. module: portal_light_partner
+#: model:ir.model,name:portal_light_partner.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: portal_light_partner
+#: model:ir.actions.act_window,name:portal_light_partner.action_portal_light_partner
+#: model:ir.ui.menu,name:portal_light_partner.menu_portal_light_partner
+msgid "Partners"
+msgstr ""
+
+#. module: portal_light_partner
+#: field:res.partner,partner_rule:0
+msgid "Search rule"
+msgstr ""
+
