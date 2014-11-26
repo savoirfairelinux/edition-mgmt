@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE openerp SYSTEM "openerp.dtd">
+<openerp>
+  <data>
+
+    <record id="product_spine_form_view" model="ir.ui.view">
+      <field name="name">product.spine.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@string='Information']/group" position="after">
+          <group>
+            <group>
+              <field name="spine"/>
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+
+  </data>
+</openerp>
+
