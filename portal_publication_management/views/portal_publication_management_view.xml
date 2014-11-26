@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_portal_publication_management" model="ir.actions.act_window">
+            <field name="name">Publications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">publication.management</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_type">form</field>
+            <!--Fake rule for the domain.-->
+            <!--We just need to call publication_rule which will do the real-->
+            <!--domain action-->
+            <field name="domain">[('publication_rule','=',True)]</field>
+            <field name="search_view_id" ref="publication_management.publication_management_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new publication.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_portal_publication_management"
+                  id="menu_portal_publication_management"
+                  parent="portal.portal_orders"
+                  name="Publication Management"
+                  groups="base.group_portal"/>
+    </data>
+</openerp>

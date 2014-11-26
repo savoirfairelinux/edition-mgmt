@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="website_sale.product_template_public" model="ir.rule">
+            <field name="name">Public product template - Access to not published products </field>
+            <field name="model_id" ref="product.model_product_template"/>
+            <field name="domain_force">[("sale_ok", "=", True)]</field>
+            <field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_portal'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="sale_order_personal_rule" model="ir.rule">
+            <field name="name">Personal Orders</field>
+            <field ref="sale.model_sale_order" name="model_id"/>
+            <field name="domain_force"> ['|',('user_id','=',user.id),('user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+
+        <record id="sale_order_report_personal_rule" model="ir.rule">
+            <field name="name">Personal Orders Analysis</field>
+            <field ref="sale.model_sale_report" name="model_id"/>
+            <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+
+        <record id="sale_order_line_personal_rule" model="ir.rule">
+            <field name="name">Personal Order Lines</field>
+            <field ref="sale.model_sale_order_line" name="model_id"/>
+            <field name="domain_force">['|',('order_id.user_id','=',user.id),('order_id.user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+
+
+    </data>
+</openerp>
