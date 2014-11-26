@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Renaming Products to Versions-->
+        <record id="product.product_template_action" model="ir.actions.act_window">
+            <field name="name">Versions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('state', 'in', ('proposition', 'proposition_draft', 'orderable'))]</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+        </record>
+        <menuitem action="product.product_template_action"
+                  id="product.menu_product_template_action"
+                  name="Versions"
+                  parent="base.menu_product" sequence="1"/>
+
+        <record id="product_template_double_name_view_form" model="ir.ui.view">
+            <field name="name">Product.template: Add a second name field with conditions on it form view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="attrs">{'invisible':[('name_switch','=',True)], 'required':[('name_switch','=',False)]}</attribute>
+                </field>
+                <field name="name" position="after">
+                    <field name="version_name"
+                           attrs="{'invisible': [('name_switch','=',False)], 'required':[('name_switch','=',True)]}"
+                            />
+                </field>
+                <notebook position="before">
+                    <field name="name_switch" invisible="1"/>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</openerp>
