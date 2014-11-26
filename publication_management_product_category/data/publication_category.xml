@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="publication_management_publication_category"
+                model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Publications</field>
+        </record>
+    </data>
+</openerp>

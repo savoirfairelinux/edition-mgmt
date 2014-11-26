@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* publication_management_product_category
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-04 17:27+0000\n"
+"PO-Revision-Date: 2014-11-04 17:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: publication_management_product_category
+#: field:publication.management,product_category_id:0
+msgid "Product Category"
+msgstr ""
+
+#. module: publication_management_product_category
+#: model:ir.model,name:publication_management_product_category.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: publication_management_product_category
+#: model:ir.model,name:publication_management_product_category.model_publication_management
+msgid "Publication Management"
+msgstr ""
+
+#. module: publication_management_product_category
+#: model:product.category,name:publication_management_product_category.publication_management_publication_category
+msgid "Publications"
+msgstr ""
+
