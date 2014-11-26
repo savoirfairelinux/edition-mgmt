@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_format_link_product_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-04 17:20+0000\n"
+"PO-Revision-Date: 2014-11-04 17:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_format_link_product_template
+#: field:base.format,product_black_white:0
+msgid "Black and White"
+msgstr ""
+
+#. module: base_format_link_product_template
+#: field:base.format,product_color:0
+msgid "Color"
+msgstr ""
+
+#. module: base_format_link_product_template
+#: view:base.format:base_format_link_product_template.base_format_link_product_template_form
+msgid "Links"
+msgstr ""
+
+#. module: base_format_link_product_template
+#: field:base.format,product_mixed:0
+msgid "Mixed"
+msgstr ""
+
+#. module: base_format_link_product_template
+#: model:ir.model,name:base_format_link_product_template.model_base_format
+msgid "This model stores dimensions."
+msgstr ""
+

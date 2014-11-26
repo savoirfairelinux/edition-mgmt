@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="base_format_link_product_template_form">
+            <field name="name">Base Format: Link Product Template</field>
+            <field name="model">base.format</field>
+            <field name="inherit_id" ref="base_format.base_format_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[last()]" position="after">
+                    <group name="link_product_templates"
+                           string="Links"
+                           colspan="3">
+                        <field name="product_black_white"/>
+                        <field name="product_color"/>
+                        <field name="product_mixed"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
