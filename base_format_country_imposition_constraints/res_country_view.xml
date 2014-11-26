@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="res_country_page_layout_constraints_form"
+                model="ir.ui.view">
+            <field name="name">Country: page layout constraints</field>
+            <field name="model">res.country</field>
+            <field name="priority">20</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <field name="address_format" position="after">
+                    <group name="imposition_constraints"
+                           string="Imposition Constraints"
+                           colspan="3">
+                        <div class="oe_module_name">
+                            <p>By default the imposition is considered to be 2UP.
+                                The following values are the threshold to switch to 4UP.
+                            </p>
+                        </div>
+                        <h3 colspan="3">Bleeding</h3>
+                        <group>
+                            <group>
+                                <field name="bleed_width_threshold"/>
+                            </group>
+                            <group>
+                                <field name="bleed_height_threshold"/>
+                            </group>
+                        </group>
+                        <h3 colspan="3">No Bleeding</h3>
+                        <group>
+                            <group>
+                                <field name="no_bleed_width_threshold"/>
+                            </group>
+                            <group>
+                                <field name="no_bleed_height_threshold"/>
+                            </group>
+                        </group>
+                    </group>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
