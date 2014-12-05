@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE openerp SYSTEM "openerp.dtd">
+<openerp>
+    <data>
+
+        <record id="product_remove_page_count_form_view" model="ir.ui.view">
+            <field name="name">product.remove.page.count.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product_page_count.product_page_count_form_view"/>
+            <field name="arch" type="xml">
+                <!-- remove field in page information -->
+                <xpath expr="//page[@string='Information']/group/group/field[@name='color_page_count']"
+                       position="replace"/>
+                <xpath expr="//page[@string='Information']/group/group/field[@name='page_count']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_remove_format_form_view" model="ir.ui.view">
+            <field name="name">product.remove.format.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product_format.product_format_form_view"/>
+            <field name="arch" type="xml">
+                <!-- remove field in page information -->
+                <xpath expr="//page[@string='Information']/group/group/field[@name='format']"
+                       position="replace"/>
+                <xpath expr="//page[@string='Information']/group/group/field[@name='custom_format']"
+                       position="replace"/>
+                <xpath expr="//page[@string='Information']/group/group/field[@name='custom_format_width']"
+                       position="replace"/>
+                <xpath expr="//page[@string='Information']/group/group/field[@name='custom_format_height']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_remove_order_destination_form_view"
+                model="ir.ui.view">
+            <field name="name">product.remove.order.destination.form.view
+            </field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product_unique_partner.product_unique_partner_form_view"/>
+            <field name="arch" type="xml">
+                <!-- remove field in page information -->
+                <xpath expr="//page[@string='Information']/group/group/field[@name='order_destination']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_remove_unique_partner_form_view"
+                model="ir.ui.view">
+            <field name="name">product.remove.unique.partner.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product_unique_partner.product_unique_partner_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Information']/group/group/field[@name='unique_partner_id']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_remove_spine_form_view" model="ir.ui.view">
+            <field name="name">product.remove.spine.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product_spine.product_spine_form_view"/>
+            <field name="arch" type="xml">
+                <!-- remove field in page information -->
+                <xpath expr="//page[@string='Information']/group/group/field[@name='spine']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_remove_product_field_form_view" model="ir.ui.view">
+            <field name="name">product.remove.product.field.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Inventory']/group/group/field[@name='weight']"
+                       position="replace"/>
+                <xpath expr="//page[@string='Information']/group/group/field[@name='ean13']"
+                       position="replace"/>
+            </field>
+        </record>
+
+        <record id="product_book_activity_form_view" model="ir.ui.view">
+            <field name="name">Product Book Activity: Characteristics page
+            </field>
+            <field name="model">product.template</field>
+            <!--The priority is set to high number to avoid any interaction-->
+            <!--with dependencies-->
+            <field name="priority">40</field>
+            <field name="inherit_id"
+                   ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <!-- move all field in page Characteristic -->
+                <page string="Information" position="before">
+                    <page string="Characteristics">
+                        <group name="general" string="General" colspan="3">
+                            <group>
+                                <label for="ean13" string="ISBN"/>
+                                <div>
+                                    <field name="ean13"/>
+                                </div>
+                                <field name="order_destination"
+                                       widget="selection"
+                                       placeholder="Select to have access to formats..."/>
+                                <field name="allowed_format_ids"
+                                       invisible="1"
+                                        />
+                                <field name="format"
+                                       domain="[('id', 'in', allowed_format_ids and allowed_format_ids[0][2])]"
+                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', True)]}"
+                                       widget="selection"
+                                        />
+                                <field name="custom_format"
+                                       attrs="{'invisible':[('order_destination','=',False)]}"
+                                        />
+                                <field name="custom_format_width"
+                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)]}"
+                                        />
+                                <field name="custom_format_height"
+                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)]}"
+                                        />
+                                <field name="unique_partner_id" invisible="1"/>
+                            </group>
+                        </group>
+                        <group name="book_pages" string="Pages" colspan="3">
+                            <group>
+                                <field name="page_count"/>
+                            </group>
+                            <p colspan="3" class="text-muted">Please indicate below the number of pages that you require in color in the version.
+                            </p>
+                            <ul colspan="3" class="text-muted">
+                                <li>If the number is 0, the version will be in black and white exclusively,</li>
+                                <li>If the number is less than the total page count, the version will consist of a mix of black and white, and color,</li>
+                                <li>If the number is equal to the total page count, the entirety of the version will be in color.</li>
+                            </ul>
+                            <group>
+                                <field name="color_page_count"/>
+                            </group>
+                        </group>
+                        <group name="calculated_values"
+                               string="Calculated Values">
+                            <p class="text-muted" colspan="3">The following values are automatically calculated according to your options.</p>
+                            <field name="spine" readonly="1"/>
+                            <field digits="(14, 3)" name="weight"
+                                   readonly="1"
+                                   string="Weight (kg)"/>
+                        </group>
+
+                    </page>
+                </page>
+            </field>
+        </record>
+        <record id="product_book_activity_page_to_group_user_view_form"
+                model="ir.ui.view">
+            <field name="name">Product Book Activity: Pages set to group user
+            </field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <page string="Information" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </page>
+                <page string="Sales" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </page>
+                <page string="Inventory" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </page>
+                <page string="Variants" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </page>
+            </field>
+        </record>
+        <record id="product_book_activity_no_variants_kanban_view"
+                model="ir.ui.view">
+            <field name="name">Product Book Activity: Remove variants in kanban
+                view
+            </field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                   ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/div/a" position="attributes">
+                    <attribute name="style">display:none;</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
