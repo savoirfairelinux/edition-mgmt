@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE openerp SYSTEM "openerp.dtd">
+<openerp>
+  <data>
+
+    <record id="product_page_count_form_view" model="ir.ui.view">
+      <field name="name">product.page.count.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <field name="list_price" position="after">
+          <field name="page_count"/>
+          <field name="color_page_count"/>
+        </field>
+      </field>
+    </record>
+
+
+  </data>
+</openerp>
+
