@@ -44,10 +44,10 @@ msgstr "Gabarit Produit"
 #. module: base_format_country
 #: view:res.country:base_format_country.base_format_country_form
 msgid "Several standards formats may be assigned by default to a country."
-msgstr "Plusieurs formats standard peuvet être assigné par défaut à un pays"
+msgstr "Plusieurs formats standard peuvent être assignés par défaut à un pays"
 
 #. module: base_format_country
 #: view:res.country:base_format_country.base_format_country_form
 msgid "When the customer processes his order,  the standard formats offered to him will be the ones added here to a country."
-msgstr "Lorsque le client sera en processus de commade, les formats standard qui lui seront proposés seront ceux assignés ici à un pays"
+msgstr "Lorsque le client sera en processus de commade, les formats standards qui lui seront proposés seront ceux assignés ici à un pays"
 
