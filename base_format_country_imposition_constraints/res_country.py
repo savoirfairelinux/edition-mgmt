@@ -21,6 +21,7 @@
 import logging
 _logger = logging.getLogger(__name__)
 from openerp import models, fields
+from openerp.tools.translate import _
 
 
 class res_country(models.Model):
@@ -28,15 +29,15 @@ class res_country(models.Model):
     _inherit = 'res.country'
 
     bleed_height_threshold = fields.Float(
-        string='Height (in inches) <=',
+        string=_('Height (in inches) <='),
     )
     bleed_width_threshold = fields.Float(
-        string='Width (in inches) <=',
+        string=_('Width (in inches) <='),
     )
     no_bleed_width_threshold = fields.Float(
-        string='Width (in inches) <=',
+        string=_('Width (in inches) <='),
     )
     no_bleed_height_threshold = fields.Float(
-        string='Height (in inches) <=',
+        string=_('Height (in inches) <='),
     )
 

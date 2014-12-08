@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-26 21:25+0000\n"
-"PO-Revision-Date: 2014-12-08 16:23-0500\n"
+"POT-Creation-Date: 2014-12-08 21:45+0000\n"
+"PO-Revision-Date: 2014-12-08 16:48-0500\n"
 "Last-Translator: Jordi Riera <jordi.riera@savoirfairelinux.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,14 +28,22 @@ msgid ""
 "                                The following values are the threshold to "
 "switch to 4UP."
 msgstr ""
-"Par défaut, l'imposition est en 2UP.\n"
-"                               Les paramêtres suivant sont les seuils pour "
-"du 4UP."
+"Par défaut, l'imposition est en 2UP.                               Les "
+"paramêtres suivant sont les seuils pour du 4UP."
 
 #. module: base_format_country_imposition_constraints
 #: model:ir.model,name:base_format_country_imposition_constraints.model_res_country
 msgid "Country"
 msgstr "Pays"
+
+#. module: base_format_country_imposition_constraints
+#: code:addons/base_format_country_imposition_constraints/res_country.py:32
+#: code:addons/base_format_country_imposition_constraints/res_country.py:41
+#: field:res.country,bleed_height_threshold:0
+#: field:res.country,no_bleed_height_threshold:0
+#, python-format
+msgid "Height (in inches) <="
+msgstr "Hauteur (en pouces) <="
 
 #. module: base_format_country_imposition_constraints
 #: view:res.country:base_format_country_imposition_constraints.res_country_page_layout_constraints_form
@@ -46,3 +54,12 @@ msgstr "Règle d'imposition"
 #: view:res.country:base_format_country_imposition_constraints.res_country_page_layout_constraints_form
 msgid "No Bleeding"
 msgstr "Sans fond perdu"
+
+#. module: base_format_country_imposition_constraints
+#: code:addons/base_format_country_imposition_constraints/res_country.py:35
+#: code:addons/base_format_country_imposition_constraints/res_country.py:38
+#: field:res.country,bleed_width_threshold:0
+#: field:res.country,no_bleed_width_threshold:0
+#, python-format
+msgid "Width (in inches) <="
+msgstr "Largeur (en pouces) <="
