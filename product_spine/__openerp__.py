@@ -33,6 +33,9 @@
 Product Spine
 =============
 This module permit to specify spine for each "book" product.
+In bookbinding, the spine is the closed edge of the book along which the pages
+are bound.
+
 Specifics features for Book Industry, perhaps usable for other industry.
 
 Contributors
