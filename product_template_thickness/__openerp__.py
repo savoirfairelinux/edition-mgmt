@@ -22,7 +22,7 @@
 
 {
     'name': 'Product Template Thickness',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -35,16 +35,20 @@ Product Page Count
 This module permit to specify the thickness for each product.
 Specifics features for Book Industry, perhaps usable for other industry.
 
+The precision of the thickness is driven by the decimal.precision
+"Product Thickness".
+It is set at 4
+
 Contributors
 ------------
-* Jordi Riera<jordi.riera@savoirfairelinux.com>
+* Jordi Riera <jordi.riera@savoirfairelinux.com>
 * William Beverly <william.beverly@savoirfairelinux.com>
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
 
-More informations
------------------
-Module developped and tested with Odoo version 8.0
-For questions, please contact our support services \
+More information
+----------------
+Module developed and tested with Odoo version 8.0.
+For questions, please contact our support services
 (support@savoirfairelinux.com)
 """,
     'depends': [

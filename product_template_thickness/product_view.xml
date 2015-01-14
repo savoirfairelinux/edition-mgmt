@@ -2,6 +2,10 @@
 <!DOCTYPE openerp SYSTEM "openerp.dtd">
 <openerp>
   <data>
+      <record forcecreate="True" id="decimal_precision_spine" model="decimal.precision">
+          <field name="name">Product Thickness</field>
+          <field name="digits">4</field>
+      </record>
 
     <record id="product_thickness_form_view" model="ir.ui.view">
       <field name="name">Product Template: thickness field</field>

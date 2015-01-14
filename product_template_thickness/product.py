@@ -21,10 +21,11 @@
 # #############################################################################
 
 import logging
-from openerp.osv import fields, orm
-from openerp import api
 
 _logger = logging.getLogger(__name__)
+
+from openerp.osv import fields, orm
+from openerp.addons import decimal_precision
 
 
 class product_template(orm.Model):
@@ -34,6 +35,9 @@ class product_template(orm.Model):
     _inherit = 'product.template'
 
     _columns = {
-        'thickness': fields.float('Thickness', default=0),
+        'thickness': fields.float(
+            'Thickness',
+            digits_compute=decimal_precision.get_precision(
+                'Product Thickness')
+        ),
     }
-
