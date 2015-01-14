@@ -22,7 +22,7 @@
 
 {
     'name': 'Product Spine',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -43,11 +43,12 @@ Contributors
 * Mathieu Benoit <mathieu.benoit@savoirfairelinux.com>
 * William Beverly <william.beverly@savoirfairelinux.com>
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
+* Jordi Riera <jordi.riera@savoirfairelinux.com>
 
-More informations
------------------
-Module developped and tested with Odoo version 8.0
-For questions, please contact our support services \
+More information
+----------------
+Module developed and tested with Odoo version 8.0.
+For questions, please contact our support services
 (support@savoirfairelinux.com)
 """,
     'depends': [

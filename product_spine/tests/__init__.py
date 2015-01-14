@@ -20,7 +20,3 @@
 #
 ##############################################################################
 from . import test_product_template
-
-checks = [
-    test_product_template,
-]

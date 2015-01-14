@@ -18,7 +18,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-from werkzeug.datastructures import FileStorage
 from openerp.tests import common
 
 
@@ -33,10 +32,33 @@ class test_product_template(common.TransactionCase):
             {'name': 't_name'}
         )
 
+        # more than one set of values is test to avoid to
+        # have a special case that would fit the case by chance.
+
         spine = product_template.calculate_spine(
             number_pages=290,
             paper_thickness=0.058,
             cover_thickness=0.6
         )
-
         self.assertAlmostEqual(spine, 1.742)
+
+        spine = product_template.calculate_spine(
+            number_pages=80,
+            paper_thickness=0.058,
+            cover_thickness=0.6
+        )
+        self.assertAlmostEqual(spine, 0.524)
+
+        spine = product_template.calculate_spine(
+            number_pages=160,
+            paper_thickness=0.0645,
+            cover_thickness=0.69
+        )
+        self.assertAlmostEqual(spine, 1.101)
+
+        spine = product_template.calculate_spine(
+            number_pages=500,
+            paper_thickness=0.043,
+            cover_thickness=0.6
+        )
+        self.assertAlmostEqual(spine, 2.21)
