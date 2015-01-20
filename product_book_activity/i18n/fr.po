@@ -1,19 +1,25 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* product_book_activity
+# 	* product_book_activity
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 16:58+0000\n"
-"PO-Revision-Date: 2014-11-04 16:58+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-01-20 16:13+0000\n"
+"PO-Revision-Date: 2015-01-20 11:17-0500\n"
+"Last-Translator: Jordi Riera <jordi.riera@savoirfairelinux.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Black & White"
+msgstr "Noir et blanc intégral "
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
@@ -26,6 +32,16 @@ msgid "Characteristics"
 msgstr "Caractéristiques"
 
 #. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Color"
+msgstr "Couleur intégrale"
+
+#. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Combined (Black & White + color)"
+msgstr "Mixte (couleur et noir-blanc) "
+
+#. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
 msgid "General"
 msgstr "Général"
@@ -36,19 +52,9 @@ msgid "ISBN"
 msgstr "ISBN"
 
 #. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is 0, the version will be in black and white exclusively,"
-msgstr "Si la quantité renseignée est nulle, la version est intégralement en noir et blanc,"
-
-#. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is equal to the total page count, the entirety of the version will be in color."
-msgstr "Si la quantité correspond au total de page, la version est intégralement en couleur."
-
-#. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is less than the total page count, the version will consist of a mix of black and white, and color,"
-msgstr "Si la quantité est inférieur au nombre total, la version est mixte."
+#: field:product.template,impression_types:0
+msgid "Impressions"
+msgstr "Impressions"
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
@@ -67,11 +73,6 @@ msgid "Pages"
 msgstr "Pages"
 
 #. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "Please indicate below the number of pages that you require in color in the version."
-msgstr "Veuillez spécifier ci-dessous le nombre de pages couleur souhaité dans la version."
-
-#. module: product_book_activity
 #: model:ir.model,name:product_book_activity.model_product_template
 msgid "Product Template"
 msgstr "Gabarit Produit"
@@ -88,8 +89,14 @@ msgstr "Veuillez faire une sélection afin d'avoir accès aux formats"
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "The following values are automatically calculated according to your options."
-msgstr "Les valeurs suivantes sont calculées automatiquement selon les choix d'options"
+msgid ""
+"The following\n"
+"                                values are automatically calculated "
+"according\n"
+"                                to your options."
+msgstr ""
+"Ces valeurs seront automatiquement calculée après que vous ayez sélectionné "
+"vos options."
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_page_to_group_user_view_form
@@ -110,4 +117,3 @@ msgstr "base.group_user"
 #: view:product.template:product_book_activity.product_book_activity_no_variants_kanban_view
 msgid "display:none;"
 msgstr "display:none;"
-

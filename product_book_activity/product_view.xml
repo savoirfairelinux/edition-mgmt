@@ -129,23 +129,25 @@
                             </group>
                         </group>
                         <group name="book_pages" string="Pages" colspan="3">
-                            <group>
-                                <field name="page_count"/>
+                            <group colspan="3">
+                                <field name="impression_types" required="True"/>
                             </group>
-                            <p colspan="3" class="text-muted">Please indicate below the number of pages that you require in color in the version.
-                            </p>
-                            <ul colspan="3" class="text-muted">
-                                <li>If the number is 0, the version will be in black and white exclusively,</li>
-                                <li>If the number is less than the total page count, the version will consist of a mix of black and white, and color,</li>
-                                <li>If the number is equal to the total page count, the entirety of the version will be in color.</li>
-                            </ul>
-                            <group>
-                                <field name="color_page_count"/>
+                            <group colspan="3">
+                                <group>
+                                    <field name="page_count" required="True"/>
+                                </group>
+                                <group>
+                                    <field name="color_page_count"
+                                           attrs="{'invisible':[('impression_types', '!=', 'combined')], 'required':[('impression_types', '=', 'combined')]}"/>
+                                </group>
                             </group>
                         </group>
                         <group name="calculated_values"
                                string="Calculated Values">
-                            <p class="text-muted" colspan="3">The following values are automatically calculated according to your options.</p>
+                            <p class="text-muted" colspan="3">The following
+                                values are automatically calculated according
+                                to your options.
+                            </p>
                             <field name="spine" readonly="1"/>
                             <field digits="(14, 3)" name="weight"
                                    readonly="1"

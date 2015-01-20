@@ -4,7 +4,7 @@
 # This module copyright (C) 2013 Savoir-faire Linux
 # (<http://www.savoirfairelinux.com>).
 #
-#    This program is free software: you can redistribute it and/or modify
+# This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
@@ -30,6 +30,15 @@ class product_template(models.Model):
     allowed_format_ids = fields.Many2many(
         'base.format',
         related='order_destination.format_ids',
+    )
+    impression_types = fields.Selection(
+        [
+            ('monochrome', 'Black & White'),
+            ('color', 'Color'),
+            ('combined', 'Combined (Black & White + color)'),
+        ],
+        default='monochrome',
+        string='Impressions',
     )
 
     @api.onchange('order_destination')

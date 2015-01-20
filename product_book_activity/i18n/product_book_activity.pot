@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 16:58+0000\n"
-"PO-Revision-Date: 2014-11-04 16:58+0000\n"
+"POT-Creation-Date: 2015-01-20 16:11+0000\n"
+"PO-Revision-Date: 2015-01-20 16:11+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Black & White"
+msgstr ""
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
@@ -23,6 +28,16 @@ msgstr ""
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
 msgid "Characteristics"
+msgstr ""
+
+#. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Color"
+msgstr ""
+
+#. module: product_book_activity
+#: selection:product.template,impression_types:0
+msgid "Combined (Black & White + color)"
 msgstr ""
 
 #. module: product_book_activity
@@ -36,18 +51,8 @@ msgid "ISBN"
 msgstr ""
 
 #. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is 0, the version will be in black and white exclusively,"
-msgstr ""
-
-#. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is equal to the total page count, the entirety of the version will be in color."
-msgstr ""
-
-#. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "If the number is less than the total page count, the version will consist of a mix of black and white, and color,"
+#: field:product.template,impression_types:0
+msgid "Impressions"
 msgstr ""
 
 #. module: product_book_activity
@@ -67,11 +72,6 @@ msgid "Pages"
 msgstr ""
 
 #. module: product_book_activity
-#: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "Please indicate below the number of pages that you require in color in the version."
-msgstr ""
-
-#. module: product_book_activity
 #: model:ir.model,name:product_book_activity.model_product_template
 msgid "Product Template"
 msgstr ""
@@ -88,7 +88,9 @@ msgstr ""
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
-msgid "The following values are automatically calculated according to your options."
+msgid "The following\n"
+"                                values are automatically calculated according\n"
+"                                to your options."
 msgstr ""
 
 #. module: product_book_activity
