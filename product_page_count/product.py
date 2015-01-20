@@ -23,6 +23,7 @@
 import logging
 from openerp.osv import fields, orm
 from openerp import api
+from openerp.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 
@@ -37,6 +38,18 @@ class product_product(orm.Model):
         'page_count': fields.integer('Total number of pages', default=0),
         'color_page_count': fields.integer('Number of pages in color', default=0),
     }
+
+    @api.constrains('page_count')
+    def _page_count_positive(self):
+        for record in self:
+            if record.page_count < 1:
+                raise ValidationError("The number of page has to be more than zero (0).")
+
+    @api.constrains('color_page_count')
+    def _color_page_count_positive(self):
+        for record in self:
+            if record.color_page_count < 0:
+                raise ValidationError("The number of color page has be equal to or above zero (0).")
 
     @staticmethod
     def _compute_pair_page_count(vals):
