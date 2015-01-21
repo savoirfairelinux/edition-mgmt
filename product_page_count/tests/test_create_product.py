@@ -20,25 +20,7 @@ class TestModelAction(common.TransactionCase):
         except ValidationError as m:
             self.assertEqual(m.value, no_page_error)
 
-    def test_create_product_with_page_count(self):
-
-        try:
-            self.env['product.template'].create({
-                "name": "Table",
-                "page_count": 0
-            })
-            self.assertEqual(True, False)
-        except ValidationError as m:
-            self.assertEqual(m.value, no_page_error)
-
-        try:
-            self.env['product.template'].create({
-                "name": "Table",
-                "page_count": 0
-            })
-            self.assertEqual(True, False)
-        except ValidationError as m:
-            self.assertEqual(m.value, no_page_error)
+    def test_create_product_with_page_count_negative(self):
 
         try:
             self.env['product.template'].create({
@@ -49,6 +31,19 @@ class TestModelAction(common.TransactionCase):
         except ValidationError as m:
             self.assertEqual(m.value, no_page_error)
 
+    def test_create_product_with_page_count_null(self):
+
+        try:
+            self.env['product.template'].create({
+                "name": "Table",
+                "page_count": -1
+            })
+            self.assertEqual(True, False)
+        except ValidationError as m:
+            self.assertEqual(m.value, no_page_error)
+
+    def test_create_product_with_page_count_positive(self):
+
         record = self.env['product.template'].create({
             "name": "Table",
             "page_count": 1
@@ -56,7 +51,7 @@ class TestModelAction(common.TransactionCase):
 
         self.assertGreater(record.page_count, 0)
 
-    def test_create_product_with_color_page(self):
+    def test_create_product_with_color_page_negative(self):
         try:
             self.env['product.template'].create({
                 "name": "Table",
@@ -67,6 +62,8 @@ class TestModelAction(common.TransactionCase):
         except ValidationError as m:
             self.assertEqual(m.value, neg_col_page)
 
+    def test_create_product_with_color_page_null(self):
+
         record = self.env['product.template'].create({
             "name": "Table",
             "page_count": 1,
@@ -75,6 +72,9 @@ class TestModelAction(common.TransactionCase):
 
         self.assertEqual(record.color_page_count, 0)
 
+
+    def test_create_product_with_color_page_positive(self):
+
         record = self.env['product.template'].create({
             "name": "Table",
             "page_count": 1,
@@ -82,14 +82,3 @@ class TestModelAction(common.TransactionCase):
         })
 
         self.assertGreater(record.color_page_count, 0)
-
-    def test_create_product_with_page_count_negative(self):
-        try:
-            self.env['product.template'].create({
-                "name": "Table",
-                "page_count": -1,
-                "color_page_count": 1,
-            })
-            self.assertEqual(True, False)
-        except ValidationError as m:
-            self.assertEqual(m.value, no_page_error)

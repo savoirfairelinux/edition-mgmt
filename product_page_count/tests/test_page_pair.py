@@ -10,7 +10,7 @@ neg_col_page = 'The number of color page has be equal to or above zero (0).'
 
 class TestModelAction(common.TransactionCase):
 
-    def test_create_product_with_page_count(self):
+    def test_create_product_page_count_pair(self):
 
         record = self.env['product.template'].create({
             "name": "Table",
