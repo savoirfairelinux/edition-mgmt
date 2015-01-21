@@ -49,18 +49,6 @@
             </field>
         </record>
 
-        <record id="product_remove_unique_partner_form_view"
-                model="ir.ui.view">
-            <field name="name">product.remove.unique.partner.form</field>
-            <field name="model">product.template</field>
-            <field name="inherit_id"
-                   ref="product_unique_partner.product_unique_partner_form_view"/>
-            <field name="arch" type="xml">
-                <xpath expr="//page[@string='Information']/group/group/field[@name='unique_partner_id']"
-                       position="replace"/>
-            </field>
-        </record>
-
         <record id="product_remove_spine_form_view" model="ir.ui.view">
             <field name="name">product.remove.spine.form</field>
             <field name="model">product.template</field>
@@ -107,25 +95,25 @@
                                 </div>
                                 <field name="order_destination"
                                        widget="selection"
-                                       placeholder="Select to have access to formats..."/>
+                                       placeholder="Select to have access to formats..."
+                                       required="1"/>
                                 <field name="allowed_format_ids"
                                        invisible="1"
                                         />
                                 <field name="format"
                                        domain="[('id', 'in', allowed_format_ids and allowed_format_ids[0][2])]"
-                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', True)]}"
                                        widget="selection"
+                                       attrs="{'invisible':['|', ('order_destination','=', False), ('custom_format','=', True)], 'required':['|', ('order_destination','=', True), ('custom_format','=', False)],}"
                                         />
                                 <field name="custom_format"
                                        attrs="{'invisible':[('order_destination','=',False)]}"
                                         />
                                 <field name="custom_format_width"
-                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)]}"
+                                        attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)], 'required':['|', ('order_destination','=', True), ('custom_format','=', True)]}"
                                         />
                                 <field name="custom_format_height"
-                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)]}"
+                                       attrs="{'invisible':['|', ('order_destination','=',False), ('custom_format','=', False)], 'required':['|', ('order_destination','=', True), ('custom_format','=', True)]}"
                                         />
-                                <field name="unique_partner_id" invisible="1"/>
                             </group>
                         </group>
                         <group name="book_pages" string="Pages" colspan="3">
@@ -160,8 +148,7 @@
         </record>
         <record id="product_book_activity_page_to_group_user_view_form"
                 model="ir.ui.view">
-            <field name="name">Product Book Activity: Pages set to group user
-            </field>
+            <field name="name">Product Book Activity: Pages set to group user</field>
             <field name="model">product.template</field>
             <field name="inherit_id"
                    ref="product.product_template_only_form_view"/>

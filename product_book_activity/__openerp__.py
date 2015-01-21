@@ -22,34 +22,16 @@
 
 {
     'name': 'Product Book Activity',
-    'version': '0.1',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
     'category': 'Sale',
-    'summary': '',
-    'description': """
-Product Book Activity
-=====================
-This module permit to verticalize product form for book industry.
-
-Contributors
-------------
-* Mathieu Benoit <mathieu.benoit@savoirfairelinux.com>
-* William Beverly <william.beverly@savoirfairelinux.com>
-* Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
-
-More informations
------------------
-Module developped and tested with Odoo version 8.0
-For questions, please contact our support services \
-(support@savoirfairelinux.com)
-""",
+    'summary': 'Specialisation of product.template views for book industry.',
     'depends': [
         'product',
         'product_spine',
-        'product_unique_partner',
         'product_page_count',
         'product_format',
     ],
