@@ -1,44 +1,44 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* product_page_count
+# 	* product_page_count
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-22 21:37+0000\n"
-"PO-Revision-Date: 2015-01-22 21:37+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2015-01-22 16:38-0500\n"
+"Last-Translator: Jordi Riera <jordi.riera@savoirfairelinux.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
 
 #. module: product_page_count
 #: field:product.template,color_page_count:0
 msgid "Number of pages in color"
-msgstr ""
+msgstr "Nombre de pages en couleur"
 
 #. module: product_page_count
 #: model:ir.model,name:product_page_count.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Modèle d'article"
 
 #. module: product_page_count
 #: code:addons/product_page_count/product.py:73
 #, python-format
 msgid "The number of color page has be equal to or above zero (0)."
-msgstr ""
+msgstr "Le nombre de page doit être supérieur ou égale à zéro (0)."
 
 #. module: product_page_count
 #: code:addons/product_page_count/product.py:60
 #, python-format
 msgid "The number of page has to be more than zero (0)."
-msgstr ""
+msgstr "Le nombre de page doit être supérieur à zéro (0)."
 
 #. module: product_page_count
 #: field:product.template,page_count:0
 msgid "Total number of pages"
-msgstr ""
-
+msgstr "Nombre total de pages"
