@@ -41,7 +41,7 @@ class product_product(orm.Model):
     _inherit = 'product.template'
 
     _columns = {
-        'page_count': fields.integer('Total number of pages', default=0),
+        'page_count': fields.integer('Total number of pages', default=2),
         'color_page_count': fields.integer('Number of pages in color',
                                            default=0),
     }
