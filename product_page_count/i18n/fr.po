@@ -29,14 +29,14 @@ msgstr "Modèle d'article"
 #. module: product_page_count
 #: code:addons/product_page_count/product.py:73
 #, python-format
-msgid "The number of color page has be equal to or above zero (0)."
-msgstr "Le nombre de page doit être supérieur ou égale à zéro (0)."
+msgid "The number of color pages has be equal to or above zero (0)."
+msgstr "Le nombre de pages en couleur doit être supérieur ou égale à zéro (0)."
 
 #. module: product_page_count
 #: code:addons/product_page_count/product.py:60
 #, python-format
-msgid "The number of page has to be more than zero (0)."
-msgstr "Le nombre de page doit être supérieur à zéro (0)."
+msgid "The number of pages has to be more than zero (0)."
+msgstr "Le nombre de pages doit être supérieur à zéro (0)."
 
 #. module: product_page_count
 #: field:product.template,page_count:0

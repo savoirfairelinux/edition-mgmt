@@ -57,7 +57,7 @@ class product_product(orm.Model):
         """
         for record in self:
             if record.page_count < 1:
-                raise ValidationError(_("The number of page has "
+                raise ValidationError(_("The number of pages has "
                                       "to be more than zero (0)."))
 
     @api.constrains('color_page_count')
@@ -70,7 +70,7 @@ class product_product(orm.Model):
         """
         for record in self:
             if record.color_page_count < 0:
-                raise ValidationError(_("The number of color page has "
+                raise ValidationError(_("The number of color pages has "
                                       "be equal to or above zero (0)."))
 
     @staticmethod
