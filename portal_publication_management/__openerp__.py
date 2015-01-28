@@ -22,7 +22,7 @@
 
 {
     'name': 'Portal Publication Management',
-    'version': '0.1',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
