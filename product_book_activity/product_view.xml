@@ -96,7 +96,8 @@
                                 <field name="order_destination"
                                        widget="selection"
                                        placeholder="Select to have access to formats..."
-                                       required="1"/>
+                                       required="1"
+                                       />
                                 <field name="allowed_format_ids"
                                        invisible="1"
                                         />

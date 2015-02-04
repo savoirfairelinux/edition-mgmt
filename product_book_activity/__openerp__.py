@@ -22,7 +22,7 @@
 
 {
     'name': 'Product Book Activity',
-    'version': '1.1',
+    'version': '1.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -34,6 +34,9 @@
         'product_spine',
         'product_page_count',
         'product_format',
+        'base_format_country',
+        'base_format',
+        'product_unique_partner',
     ],
     'external_dependencies': {
         'python': [],

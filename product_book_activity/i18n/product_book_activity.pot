@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-20 16:11+0000\n"
-"PO-Revision-Date: 2015-01-20 16:11+0000\n"
+"POT-Creation-Date: 2015-02-04 14:51+0000\n"
+"PO-Revision-Date: 2015-02-04 14:51+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -91,6 +91,12 @@ msgstr ""
 msgid "The following\n"
 "                                values are automatically calculated according\n"
 "                                to your options."
+msgstr ""
+
+#. module: product_book_activity
+#: code:addons/product_book_activity/product_format.py:73
+#, python-format
+msgid "The selected format is not valid for your destination. Please update the format or the destination."
 msgstr ""
 
 #. module: product_book_activity

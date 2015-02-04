@@ -1,20 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* product_book_activity
+#	* product_book_activity
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-20 16:13+0000\n"
-"PO-Revision-Date: 2015-01-20 11:17-0500\n"
-"Last-Translator: Jordi Riera <jordi.riera@savoirfairelinux.com>\n"
+"POT-Creation-Date: 2015-02-04 14:51+0000\n"
+"PO-Revision-Date: 2015-02-04 14:51+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
 
 #. module: product_book_activity
 #: selection:product.template,impression_types:0
@@ -54,13 +53,13 @@ msgstr "ISBN"
 #. module: product_book_activity
 #: field:product.template,impression_types:0
 msgid "Impressions"
-msgstr "Impressions"
+msgstr ""
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
 #: view:product.template:product_book_activity.product_book_activity_page_to_group_user_view_form
 msgid "Information"
-msgstr "Information"
+msgstr ""
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_page_to_group_user_view_form
@@ -75,7 +74,7 @@ msgstr "Pages"
 #. module: product_book_activity
 #: model:ir.model,name:product_book_activity.model_product_template
 msgid "Product Template"
-msgstr "Gabarit Produit"
+msgstr "Modèle d'article"
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_page_to_group_user_view_form
@@ -89,14 +88,16 @@ msgstr "Veuillez faire une sélection afin d'avoir accès aux formats"
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_form_view
-msgid ""
-"The following\n"
-"                                values are automatically calculated "
-"according\n"
+msgid "The following\n"
+"                                values are automatically calculated according\n"
 "                                to your options."
-msgstr ""
-"Ces valeurs seront automatiquement calculée après que vous ayez sélectionné "
-"vos options."
+msgstr "Ces valeurs seront automatiquement calculée après que vous ayez sélectionné vos options."
+
+#. module: product_book_activity
+#: code:addons/product_book_activity/product_format.py:73
+#, python-format
+msgid "The selected format is not valid for your destination. Please update the format or the destination."
+msgstr "Le format selectionné n'est pas valide pour la destination souhaité. Selectionnez un autre format ou une autre destination s'il vous plait."
 
 #. module: product_book_activity
 #: view:product.template:product_book_activity.product_book_activity_page_to_group_user_view_form
@@ -117,3 +118,4 @@ msgstr "base.group_user"
 #: view:product.template:product_book_activity.product_book_activity_no_variants_kanban_view
 msgid "display:none;"
 msgstr "display:none;"
+
